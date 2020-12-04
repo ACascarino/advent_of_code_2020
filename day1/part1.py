@@ -1,22 +1,19 @@
 import numpy as np
 
 with open("input.txt", "r") as f:
-    input_list = tuple(map(float, f.readlines()))
+    input_list = sorted(map(float, f.readlines()))
 
-small_list = iter(sorted(input_list))
-large_list = iter(sorted(input_list, reverse=True))
-
-small_elem = next(small_list)
-large_elem = next(large_list)
+small_index = 0
+large_index = -1
 
 while True:
-    sum_elem = small_elem + large_elem
+    sum_elem = input_list[small_index] + input_list[large_index]
     if sum_elem > 2020:
-        large_elem = next(large_list)
+        large_index -= 1
     elif sum_elem < 2020:
-        small_elem = next(small_list)
+        small_index += 1
     else:
-        target_pair = (small_elem, large_elem)
+        target_pair = (input_list[small_index], input_list[large_index])
         break
 
 print(np.prod(target_pair))
