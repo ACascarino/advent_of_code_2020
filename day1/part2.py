@@ -2,7 +2,7 @@ import numpy as np
 
 TARGET_FACTORS = 3
 
-with open("input.txt", "r") as f:
+with open("day1/input.txt", "r") as f:
     input_list = sorted(map(float, f.readlines()))
 
 indices = list(range(-1, TARGET_FACTORS-1))
