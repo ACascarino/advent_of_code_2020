@@ -33,5 +33,5 @@ if __name__ == "__main__":
     for input_set in zip(RIGHT, DOWN):
         result.append(check_trees(*input_set))
 
-    solution = np.product(result)
+    solution = np.product(result, dtype='int64')
     print(solution)
