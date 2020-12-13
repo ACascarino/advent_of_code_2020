@@ -2,7 +2,7 @@ def find_containers(rules, list_of_interesting_bags, bag_of_interest):
     list_of_interesting_bags += [rule['colour'] for rule in rules if bag_of_interest in rule['contents'].keys()]
     return list_of_interesting_bags
 
-with open("day7/input.txt", "r") as f:
+with open("day07/input.txt", "r") as f:
     rules = [rule.rstrip(".\n") for rule in f]
 
 str_rules = [rule.partition(" contain ") for rule in rules]

@@ -1,4 +1,4 @@
-with open("day2/input.txt", "r") as f:
+with open("day02/input.txt", "r") as f:
     input_file = [tuple(l.split()) for l in f.readlines()]
 
 counter = 0

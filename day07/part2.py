@@ -1,4 +1,4 @@
-with open("day7/input.txt", "r") as f:
+with open("day07/input.txt", "r") as f:
     rules = [rule.rstrip(".\n") for rule in f]
 
 str_rules = [rule.partition(" contain ") for rule in rules]

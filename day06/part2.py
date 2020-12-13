@@ -1,4 +1,4 @@
-with open("day6/input.txt", "r") as f:
+with open("day06/input.txt", "r") as f:
     groups = [x.split('\n') for x in f.read().split('\n\n')]
 
 total_length = 0

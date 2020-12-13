@@ -1,6 +1,6 @@
 import numpy as np
 
-with open("day1/input.txt", "r") as f:
+with open("day01/input.txt", "r") as f:
     input_list = sorted(map(float, f.readlines()))
 
 small_index = 0

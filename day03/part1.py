@@ -1,10 +1,10 @@
 import numpy as np
 
-RIGHT = (1,3,5,7,1)
-DOWN = (1,1,1,1,2)
+RIGHT = 1
+DOWN = 3
 
 def check_trees(right, down):
-    with open("day3/input.txt", "r") as f:
+    with open("day03/input.txt", "r") as f:
         forest_tile = f.readlines()
 
     forest_height = len(forest_tile)
@@ -28,10 +28,5 @@ def check_trees(right, down):
     return(counter)
 
 if __name__ == "__main__":
-    result = []
-    
-    for input_set in zip(RIGHT, DOWN):
-        result.append(check_trees(*input_set))
-
-    solution = np.product(result, dtype='int64')
-    print(solution)
+    result = check_trees(RIGHT, DOWN)
+    print(result)
