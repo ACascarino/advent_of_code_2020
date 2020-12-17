@@ -1,5 +1,3 @@
-import numpy as np
-
 RIGHT = 1
 DOWN = 3
 

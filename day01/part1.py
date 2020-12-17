@@ -1,5 +1,3 @@
-import numpy as np
-
 with open("day01/input.txt", "r") as f:
     input_list = sorted(map(float, f.readlines()))
 
@@ -13,7 +11,5 @@ while True:
     elif sum_elem < 2020:
         small_index += 1
     else:
-        target_pair = (input_list[small_index], input_list[large_index])
+        print(input_list[small_index] * input_list[large_index])
         break
-
-print(np.prod(target_pair))

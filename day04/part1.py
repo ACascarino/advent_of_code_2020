@@ -1,5 +1,3 @@
-import numpy as np
-
 with open("day04/input.txt", "r") as f:
     input_file = f.read()
     passport_strings = [passport.split() for passport in input_file.split("\n\n")]

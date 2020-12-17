@@ -1,7 +1,3 @@
-import time
-
-print(time.time())
-
 with open("day08/input.txt") as f:
     assembly = f.readlines()
 
@@ -49,5 +45,3 @@ while True:
     if type(trial) == int:
         print(trial)
         break
-
-print(time.time())
