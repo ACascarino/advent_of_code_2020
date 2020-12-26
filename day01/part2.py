@@ -25,4 +25,6 @@ while True:
 product = 1
 for elem in target_elems:
     product *= elem
+
 print(product)
+

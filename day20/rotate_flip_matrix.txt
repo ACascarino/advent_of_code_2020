@@ -1,0 +1,47 @@
+I am 0 and
+    I match normal and
+        I match 180:    Rotate 0, flip Y
+        I match 270:    Rotate 270, flip X
+        I match 90:     Rotate 90, flip X
+        I match 0:      Rotate 180, flip Y
+    I match reverse and
+        I match bottom: Rotate 0, do not flip
+        I match left:   Rotate 270, do not flip
+        I match right:  Rotate 90, do not flip
+        I match top:    Rotate 180, do not flip
+
+I am left and
+    I match normal and
+        I match bottom: Rotate 270, flip Y
+        I match left:   Rotate 180, flip X
+        I match right:  Rotate 0, flip X
+        I match top:    Rotate 90, flip Y
+    I match reverse and
+        I match bottom: Rotate 270, do not flip
+        I match left:   Rotate 180, do not flip
+        I match right:  Rotate 0, do not flip
+        I match top:    Rotate 90, do not flip
+
+I am bottom and
+    I match normal and
+        I match bottom: Rotate 180, flip Y
+        I match left:   Rotate 90, flip X
+        I match right:  Rotate 270, flip X
+        I match top:    Rotate 0, flip Y
+    I match reverse and
+        I match bottom: Rotate 180, do not flip
+        I match left:   Rotate 90, do not flip
+        I match right:  Rotate 170, do not flip
+        I match top:    Rotate 0, do not flip
+
+I am right and
+    I match normal and
+        I match bottom: Rotate 90, flip Y
+        I match left:   Rotate 0, flip X
+        I match right:  Rotate 180, flip X
+        I match top:    Rotate 270, flip Y
+    I match reverse and
+        I match bottom: Rotate 270, do not flip
+        I match left:   Rotate 180, do not flip
+        I match right:  Rotate 0, do not flip
+        I match top:    Rotate 90, do not flip

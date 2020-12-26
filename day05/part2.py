@@ -11,4 +11,3 @@ max_row = max(row_ids) - 1
 min_row = min(row_ids) + 1
 possible_seats = set(range(min_row*8, (max_row*8)+1))
 print(possible_seats - seat_ids)
-
