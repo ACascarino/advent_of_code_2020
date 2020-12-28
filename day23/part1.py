@@ -31,10 +31,6 @@ for i in range(10000000):
 
     sn = wl[sn]
 
-start_int = 1
-work_int = start_int
-order = []
-
 cup1 = wl[1]
 cup2 = wl[cup1]
 
