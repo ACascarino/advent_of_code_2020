@@ -57,6 +57,23 @@ class HexGrid():
                                 next_state |= {new_coord: new_tile}
                     next_state |= {coord:tile.get_new_state(neighbours)}
             self.tiles = next_state
+
+    def advance2(self, iterations):
+        for _ in range(iterations):
+            next_state = dict()
+
+            for coord, tile in self.tiles.items():
+                if tile:
+                    queue = {(coord, tile)}
+                    while queue:
+                        coord, tile = queue.pop()
+                        new_coords = [add_tuples(coord, direction) for direction in DIRECTIONS.values()]
+                        neighbours = [self.tiles.get(new_coord, Tile(False)) for new_coord in new_coords]
+                        if tile:
+                            queue.update([(coord, tile) for coord,tile in zip(new_coords, neighbours) if coord not in next_state])
+                        next_state |= {coord:tile.get_new_state(neighbours)}
+
+            self.tiles = next_state
     
     def count_black(self):
         return sum(1 for tile in self.tiles.values() if tile)
@@ -87,9 +104,22 @@ class Tile():
                 new_tile = self.copy().flip()
         return new_tile
 
+from time import time
+
+time1 = time()
+
 grid = HexGrid()
 grid.import_from_file("day24/input.txt")
 grid.advance(100)
 black_tiles = grid.count_black()
 
-print(black_tiles)
+time2 = time()
+
+new_grid = HexGrid()
+new_grid.import_from_file("day24/input.txt")
+new_grid.advance2(100)
+black_tiles = grid.count_black()
+
+time3 = time()
+
+print(black_tiles, time2 - time1, time3 - time2)
